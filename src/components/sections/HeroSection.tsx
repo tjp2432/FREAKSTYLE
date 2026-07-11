@@ -10,17 +10,16 @@ export function HeroSection() {
       <ParticleMist />
 
       <div className="section-container relative z-10 text-center">
-        <div className="mx-auto w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center"
-          style={{
-            maskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
-            WebkitMaskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
-          }}
-        >
+        <div className="flex flex-col items-center gap-6">
           <img
-            src={`${basePath}/images/logo-centrar.jpeg`}
-            alt={siteConfig.name}
-            className="w-[60%] h-auto object-contain"
-            style={{ mixBlendMode: "multiply" }}
+            src={`${basePath}/images/fs-01-blanco.png`}
+            alt="FS-01"
+            className="w-24 h-auto object-contain sm:w-32 md:w-40"
+          />
+          <img
+            src={`${basePath}/images/freak-style-texto-blanco.png`}
+            alt="Freak Style"
+            className="w-64 h-auto object-contain sm:w-80 md:w-96"
           />
         </div>
 
