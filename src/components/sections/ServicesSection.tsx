@@ -27,7 +27,7 @@ export function ServicesSection() {
                 {cat.items.map((item) => (
                   <div
                     key={item.id}
-                    className="rounded-lg border border-brand-light-gray/5 bg-brand-black/40 p-3 transition-colors hover:border-brand-white/10"
+                    className="rounded-lg border border-brand-light-gray/5 bg-brand-black/40 p-3 text-center transition-colors hover:border-brand-white/10"
                   >
                     <p className="text-sm font-semibold text-brand-white">
                       {item.title}
