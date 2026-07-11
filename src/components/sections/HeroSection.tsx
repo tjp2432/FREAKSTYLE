@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { ParticleMist } from "./ParticleMist";
+import { GreenFog } from "./GreenFog";
 
 const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
 
@@ -7,7 +8,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-80 w-[120%] -translate-x-1/2 bg-[radial-gradient(ellipse_80%_100%_at_50%_100%,rgba(57,255,20,0.12),transparent)]" />
+      <GreenFog />
       <ParticleMist />
 
       <div className="section-container relative z-10 text-center">
