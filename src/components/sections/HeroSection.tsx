@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import { ParticleMist } from "./ParticleMist";
 import { GreenFog } from "./GreenFog";
 
-const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
+const basePath = "/FREAKSTYLE";
 
 export function HeroSection() {
   return (

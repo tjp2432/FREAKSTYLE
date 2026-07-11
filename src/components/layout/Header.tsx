@@ -5,7 +5,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { ROUTES } from "@/lib/constants";
 
-const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
+const basePath = "/FREAKSTYLE";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
