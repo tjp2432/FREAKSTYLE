@@ -7,14 +7,14 @@ export const BREAKPOINTS = {
 
 export const ROUTES = {
   home: "/",
-  services: "/servicios",
+  services: "/#servicios",
   business: "/soluciones-empresas",
   portfolio: "/portfolio",
   store: "/tienda",
   universe: "/universo-fs-01",
   blog: "/blog",
   contact: "/contacto",
-  about: "/nosotros",
+  about: "/#nosotros",
   experience: "/experiencia",
 } as const;
 
