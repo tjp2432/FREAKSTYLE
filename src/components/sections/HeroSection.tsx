@@ -50,6 +50,13 @@ export function HeroSection() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-white/20 to-transparent" />
+
+      <div className="absolute bottom-8 left-8 z-10 flex flex-col items-center gap-2">
+        <span className="text-xs tracking-wider text-brand-light-gray/50 uppercase">Desliza para más información</span>
+        <svg className="h-5 w-5 animate-bounce text-brand-light-gray/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
     </section>
   );
 }
