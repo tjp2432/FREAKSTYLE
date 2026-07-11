@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { ROUTES } from "@/lib/constants";
 
@@ -59,14 +60,14 @@ export function Footer() {
                 {col.title}
               </h3>
               <ul className="space-y-2">
-                {col.links.map((link) => (
+                  {col.links.map((link) => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-sm text-brand-light-gray transition-colors hover:text-brand-white"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

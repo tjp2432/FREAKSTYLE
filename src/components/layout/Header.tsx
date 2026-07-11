@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { ROUTES } from "@/lib/constants";
 
@@ -30,24 +31,24 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-light-gray/10 bg-brand-black/80 backdrop-blur-md">
       <div className="section-container flex h-16 items-center justify-between">
-        <a href={ROUTES.home} className="flex items-center shrink-0">
+        <Link href={ROUTES.home} className="flex items-center shrink-0">
           <img
             src={`${basePath}/images/logo-header.jpeg`}
             alt={siteConfig.name}
             className="h-14 w-auto object-contain"
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2">
           <ul className="flex items-center gap-1">
             {visible.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="rounded-md px-3 py-2 text-sm font-medium text-brand-light-gray transition-colors hover:bg-brand-white/5 hover:text-brand-white"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
 
@@ -71,14 +72,14 @@ export function Header() {
                 {showMore && (
                   <div className="absolute right-0 top-full mt-1 w-56 rounded-lg border border-brand-light-gray/10 bg-brand-graphite p-2 shadow-xl">
                     {overflow.map((item) => (
-                      <a
+                      <Link
                         key={item.href}
                         href={item.href}
                         onClick={() => setShowMore(false)}
                         className="block rounded-md px-3 py-2 text-sm text-brand-light-gray transition-colors hover:bg-brand-white/10 hover:text-brand-white"
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -102,14 +103,14 @@ export function Header() {
         <nav className="border-t border-brand-light-gray/10 bg-brand-graphite lg:hidden">
           <div className="section-container flex flex-col gap-1 py-4">
             {nav.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className="rounded-md px-3 py-2 text-sm font-medium text-brand-light-gray transition-colors hover:bg-brand-white/10 hover:text-brand-white"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
 
           </div>
