@@ -70,11 +70,11 @@ export default function BusinessPage() {
   return (
     <section className="pb-12 sm:pb-16 lg:pb-20 pt-12">
       <div className="section-container">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-5xl text-center">
           <h1 className="text-display-sm font-bold sm:text-display-md">
             Soluciones para <span className="gradient-text">Empresas</span>
           </h1>
-          <p className="mt-6 text-base leading-relaxed text-brand-light-gray">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-light-gray">
             Ofrecemos soluciones integrales de personalización para marcas, empresas y eventos corporativos.
             Producción en serie con la más alta calidad y tiempos de entrega ajustados a tus necesidades.
           </p>
