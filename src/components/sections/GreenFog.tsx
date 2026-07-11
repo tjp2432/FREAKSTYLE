@@ -2,15 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-interface FogBlob {
-  x: number;
-  y: number;
-  radius: number;
-  speedX: number;
-  speedY: number;
-  opacity: number;
-}
-
 export function GreenFog() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -22,7 +13,7 @@ export function GreenFog() {
     if (!ctx) return;
 
     let animId: number;
-    const blobs: FogBlob[] = [];
+    let time = 0;
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -32,38 +23,38 @@ export function GreenFog() {
     resize();
     window.addEventListener("resize", resize);
 
-    for (let i = 0; i < 8; i++) {
-      blobs.push({
-        x: Math.random() * canvas.width,
-        y: canvas.height * 0.5 + Math.random() * canvas.height * 0.5,
-        radius: 200 + Math.random() * 350,
-        speedX: (Math.random() - 0.5) * 0.2,
-        speedY: -Math.random() * 0.08 - 0.02,
-        opacity: Math.random() * 0.04 + 0.02,
-      });
-    }
-
     const animate = () => {
+      time += 0.004;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      for (const b of blobs) {
-        b.x += b.speedX;
-        b.y += b.speedY;
+      const layers = [
+        { top: 0.55, amp: 50, freq: 0.006, speed: 0.25, opacity: 0.08 },
+        { top: 0.6, amp: 35, freq: 0.01, speed: 0.4, opacity: 0.06 },
+        { top: 0.65, amp: 25, freq: 0.008, speed: 0.15, opacity: 0.04 },
+      ];
 
-        if (b.y + b.radius < 0) {
-          b.y = canvas.height + b.radius;
-          b.x = Math.random() * canvas.width;
+      for (const layer of layers) {
+        const topY = canvas.height * layer.top;
+
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height);
+
+        for (let x = 0; x <= canvas.width; x += 4) {
+          const wave = Math.sin(x * layer.freq + time * layer.speed) * layer.amp;
+          const y = topY + wave;
+          ctx.lineTo(x, y);
         }
-        if (b.x + b.radius < 0) b.x = canvas.width + b.radius;
-        if (b.x - b.radius > canvas.width) b.x = -b.radius;
 
-        const gradient = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.radius);
-        gradient.addColorStop(0, `rgba(57, 255, 20, ${b.opacity})`);
-        gradient.addColorStop(0.4, `rgba(57, 255, 20, ${b.opacity * 0.5})`);
+        ctx.lineTo(canvas.width, canvas.height);
+        ctx.closePath();
+
+        const gradient = ctx.createLinearGradient(0, topY, 0, canvas.height);
+        gradient.addColorStop(0, `rgba(57, 255, 20, ${layer.opacity})`);
+        gradient.addColorStop(0.3, `rgba(57, 255, 20, ${layer.opacity * 0.6})`);
         gradient.addColorStop(1, "rgba(57, 255, 20, 0)");
 
         ctx.fillStyle = gradient;
-        ctx.fillRect(b.x - b.radius, b.y - b.radius, b.radius * 2, b.radius * 2);
+        ctx.fill();
       }
 
       animId = requestAnimationFrame(animate);
