@@ -8,16 +8,16 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
 
       <div className="section-container relative z-10 text-center">
-        <div className="mx-auto w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] rounded-full overflow-hidden"
+        <div className="mx-auto w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full flex items-center justify-center overflow-hidden"
           style={{
-            maskImage: "radial-gradient(circle at center, black 55%, transparent 100%)",
-            WebkitMaskImage: "radial-gradient(circle at center, black 55%, transparent 100%)",
+            maskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
+            WebkitMaskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
           }}
         >
           <img
             src={`${basePath}/images/logo-centrar.jpeg`}
             alt={siteConfig.name}
-            className="h-full w-full object-cover"
+            className="w-[60%] h-auto object-contain"
           />
         </div>
 
