@@ -7,11 +7,70 @@ export const metadata: Metadata = {
     "Soluciones corporativas de personalización para marcas, empresas y eventos. Uniformes, merchandising y producción en serie.",
 };
 
+const categories = [
+  {
+    title: "Identidad Corporativa",
+    items: [
+      "Uniformes de trabajo",
+      "Indumentaria institucional",
+      "Merchandising corporativo",
+      "Kits de bienvenida para empleados",
+      "Regalos empresariales",
+    ],
+  },
+  {
+    title: "Marketing y Eventos",
+    items: [
+      "Banderas",
+      "Banners",
+      "Material para ferias y exposiciones",
+    ],
+  },
+  {
+    title: "Producción Textil",
+    items: [
+      "DTF por metro",
+      "Vinilo textil",
+      "Producción de colecciones",
+      "Tiradas cortas y medianas",
+      "Prototipos",
+    ],
+  },
+  {
+    title: "Diseño",
+    items: [
+      "Diseño gráfico",
+      "Desarrollo de identidad visual",
+      "Diseño textil",
+      "Adaptación de archivos para producción",
+    ],
+  },
+  {
+    title: "Decoración Comercial",
+    items: [
+      "Telas decorativas",
+      "Vinilos",
+      "Ambientación de locales",
+      "Tapices",
+      "Elementos gráficos para oficinas y comercios",
+    ],
+  },
+  {
+    title: "Producción Especial",
+    items: [
+      "Proyectos a medida",
+      "Objetos impresos en 3D",
+      "Productos personalizados",
+      "Soluciones para campañas específicas",
+    ],
+  },
+];
+
 export default function BusinessPage() {
   return (
     <section className="section-padding">
       <div className="section-container">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <h1 className="text-display-sm font-bold sm:text-display-md">
             Soluciones para <span className="gradient-text">Empresas</span>
           </h1>
@@ -20,33 +79,26 @@ export default function BusinessPage() {
             Producción en serie con la más alta calidad y tiempos de entrega ajustados a tus necesidades.
           </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Uniforme Corporativo",
-                desc: "Vestimenta laboral personalizada con la identidad de tu marca.",
-              },
-              {
-                title: "Merchandising",
-                desc: "Productos promocionales y regalos corporativos personalizados.",
-              },
-              {
-                title: "Eventos",
-                desc: "Producción completa para lanzamientos, ferias y eventos empresariales.",
-              },
-              {
-                title: "Producción en Serie",
-                desc: "Fabricación a escala con calidad consistente y tiempos optimizados.",
-              },
-            ].map((item) => (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map((cat) => (
               <div
-                key={item.title}
+                key={cat.title}
                 className="rounded-lg border border-brand-light-gray/10 bg-brand-graphite/50 p-6"
               >
-                <h3 className="mb-2 text-sm font-semibold uppercase tracking-wider text-brand-white">
-                  {item.title}
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-white">
+                  {cat.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-brand-light-gray">{item.desc}</p>
+                <ul className="space-y-2">
+                  {cat.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm leading-relaxed text-brand-light-gray"
+                    >
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-white/40" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
