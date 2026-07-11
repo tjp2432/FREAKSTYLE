@@ -91,6 +91,104 @@ export const siteConfig = {
       icon: "PenTool",
     },
   ] as const,
+  serviceCategories: [
+    {
+      id: "diseno",
+      title: "Diseño",
+      items: [
+        {
+          id: "diseno-grafico",
+          title: "Diseño Gráfico",
+          description: "De tu idea al diseño final. Creamos la identidad visual de tu proyecto.",
+          icon: "PenTool",
+        },
+        {
+          id: "diseno-textil",
+          title: "Diseño Textil",
+          description: "Desarrollo de patrones y estampas para prendas y colecciones personalizadas.",
+          icon: "Ruler",
+        },
+        {
+          id: "desarrollo-productos",
+          title: "Desarrollo de Productos",
+          description: "Investigamos, prototipamos y desarrollamos productos únicos para tu marca o evento.",
+          icon: "Lightbulb",
+        },
+      ],
+    },
+    {
+      id: "produccion",
+      title: "Producción",
+      items: [
+        {
+          id: "dtf-por-metro",
+          title: "DTF",
+          description: "Transferencia Digital Directa al Film. Colores vibrantes y durabilidad excepcional.",
+          icon: "Roller",
+        },
+        {
+          id: "estampados-vinilo-textil-premium",
+          title: "Vinilo",
+          description: "Vinilos de alta gama para estampados duraderos con acabado profesional.",
+          icon: "Layers",
+        },
+        {
+          id: "impresiones-gran-escala",
+          title: "Gran formato",
+          description: "Impresión de gran formato para lonas, banners, cartelería y más.",
+          icon: "Maximize",
+        },
+      ],
+    },
+    {
+      id: "personalizacion",
+      title: "Personalización",
+      items: [
+        {
+          id: "indumentaria-personalizada",
+          title: "Indumentaria",
+          description: "Prendas únicas para consumidores, marcas y eventos. Calidad premium.",
+          icon: "Shirt",
+        },
+        {
+          id: "uniformes-trabajo",
+          title: "Uniformes",
+          description: "Uniforme corporativo con la identidad de tu marca. Calidad y confort.",
+          icon: "Building2",
+        },
+        {
+          id: "egresados",
+          title: "Egresados",
+          description: "Colecciones completas para promociones. Diseño y producción de prendas únicas.",
+          icon: "GraduationCap",
+        },
+      ],
+    },
+    {
+      id: "decoracion",
+      title: "Decoración",
+      items: [
+        {
+          id: "banderas-tapices",
+          title: "Tapices",
+          description: "Tapices decorativos con estampado de alta definición para cualquier espacio.",
+          icon: "Flag",
+        },
+        {
+          id: "telas-decorativas",
+          title: "Telas",
+          description: "Telas estampadas con diseño personalizado para decoración de interiores.",
+          icon: "ScrollText",
+        },
+        {
+          id: "banderas",
+          title: "Banderas",
+          description: "Banderas institucionales y promocionales con estampado de alta calidad.",
+          icon: "Flag",
+        },
+      ],
+    },
+  ] as const,
 } as const;
 
 export type Service = (typeof siteConfig.services)[number];

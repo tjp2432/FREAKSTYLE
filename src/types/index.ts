@@ -5,6 +5,12 @@ export interface ServiceItem {
   icon: string;
 }
 
+export interface ServiceCategory {
+  id: string;
+  title: string;
+  items: ServiceItem[];
+}
+
 export interface ContactInfo {
   email: string;
   phone: string;
@@ -19,4 +25,5 @@ export interface SiteConfig {
   url: string;
   contact: ContactInfo;
   services: readonly ServiceItem[];
+  serviceCategories: readonly ServiceCategory[];
 }
