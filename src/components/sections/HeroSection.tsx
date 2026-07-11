@@ -9,8 +9,8 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
       <ParticleMist />
 
-      <div className="section-container relative z-10 text-center" style={{ maxWidth: "1600px" }}>
-        <div className="mx-auto w-[340px] h-[340px] sm:w-[460px] sm:h-[460px] md:w-[600px] md:h-[600px] rounded-full flex items-center justify-center overflow-hidden"
+      <div className="section-container relative z-10 text-center">
+        <div className="mx-auto w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full flex items-center justify-center overflow-hidden"
           style={{
             maskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
             WebkitMaskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
@@ -23,11 +23,11 @@ export function HeroSection() {
           />
         </div>
 
-        <p className="mx-auto mt-10 max-w-3xl text-xl leading-relaxed text-brand-light-gray sm:text-2xl md:text-3xl font-medium">
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-brand-light-gray sm:text-xl md:text-2xl font-medium">
           &ldquo;Materializamos tus ideas para expresar tu identidad.&rdquo;
         </p>
 
-        <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-brand-light-gray/70 sm:text-base md:text-lg">
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-brand-light-gray/70 sm:text-base">
           Freak Style Corp es una empresa de diseño, manufactura creativa e innovación especializada en el desarrollo de productos personalizados, textiles, objetos y soluciones visuales.
         </p>
 
