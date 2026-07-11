@@ -11,7 +11,7 @@ export function HeroSection() {
       <GreenFog />
       <ParticleMist />
 
-      <div className="hidden sm:absolute sm:bottom-1/4 sm:left-1 sm:z-10 sm:flex sm:flex-col sm:items-center sm:gap-2">
+      <div className="hidden sm:absolute sm:top-3/4 sm:left-1 sm:z-10 sm:flex sm:flex-col sm:items-center sm:gap-2">
         <span className="text-xs tracking-wider text-brand-light-gray/50 uppercase">Desliza para más información</span>
         <svg className="h-5 w-5 animate-bounce text-brand-light-gray/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
