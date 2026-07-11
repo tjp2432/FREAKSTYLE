@@ -13,13 +13,8 @@ export function HeroSection() {
         <div className="flex flex-col items-center gap-6">
           <img
             src={`${basePath}/images/fs-01-blanco.png`}
-            alt="FS-01"
-            className="w-24 h-auto object-contain sm:w-32 md:w-40"
-          />
-          <img
-            src={`${basePath}/images/freak-style-texto-blanco.png`}
             alt="Freak Style"
-            className="w-64 h-auto object-contain sm:w-80 md:w-96"
+            className="w-48 h-auto object-contain sm:w-64 md:w-80"
           />
         </div>
 

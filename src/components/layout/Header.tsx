@@ -33,9 +33,9 @@ export function Header() {
       <div className="section-container flex h-16 items-center justify-between">
         <Link href={ROUTES.home} className="flex items-center shrink-0">
           <img
-            src={`${basePath}/images/logo-header.png`}
+            src={`${basePath}/images/fs-01-blanco.png`}
             alt={siteConfig.name}
-            className="h-14 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </Link>
 
