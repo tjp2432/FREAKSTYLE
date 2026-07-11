@@ -36,6 +36,7 @@ export function Header() {
             src={`${basePath}/images/logo-header.jpeg`}
             alt={siteConfig.name}
             className="h-14 w-auto object-contain"
+            style={{ mixBlendMode: "multiply" }}
           />
         </Link>
 
