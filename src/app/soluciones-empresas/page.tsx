@@ -83,7 +83,7 @@ export default function BusinessPage() {
             {categories.map((cat) => (
               <div
                 key={cat.title}
-                className="rounded-lg border border-brand-light-gray/10 card-rivets p-6 text-center"
+                className="flex flex-col items-center justify-center rounded-lg border border-brand-light-gray/10 card-rivets p-6 text-center"
               >
                 <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-white">
                   {cat.title}
