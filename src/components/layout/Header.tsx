@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { ROUTES } from "@/lib/constants";
+
+const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
 
 const VISIBLE_ITEMS = 6;
 
@@ -30,13 +31,10 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-light-gray/10 bg-brand-black/80 backdrop-blur-md">
       <div className="section-container flex h-16 items-center justify-between">
         <a href={ROUTES.home} className="flex items-center shrink-0">
-          <Image
-            src="/images/logo-header.jpeg"
+          <img
+            src={`${basePath}/images/logo-header.jpeg`}
             alt={siteConfig.name}
-            width={200}
-            height={56}
             className="h-14 w-auto object-contain"
-            priority
           />
         </a>
 
