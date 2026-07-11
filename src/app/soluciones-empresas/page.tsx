@@ -83,7 +83,7 @@ export default function BusinessPage() {
             {categories.map((cat) => (
               <div
                 key={cat.title}
-                className="rounded-lg border border-brand-light-gray/10 bg-brand-graphite/50 p-6"
+                className="rounded-lg border border-brand-light-gray/10 bg-brand-graphite/50 p-6 text-center"
               >
                 <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-white">
                   {cat.title}
@@ -92,9 +92,9 @@ export default function BusinessPage() {
                   {cat.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 text-sm leading-relaxed text-brand-light-gray"
+                      className="flex items-center justify-center gap-2 text-sm leading-relaxed text-brand-light-gray"
                     >
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-white/40" />
+                      <span className="h-1 w-1 shrink-0 rounded-full bg-brand-white/40" />
                       {item}
                     </li>
                   ))}
