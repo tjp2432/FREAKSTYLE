@@ -29,7 +29,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-brand-white/5 ${
+                  className={`rounded-md px-2 py-2 text-xs font-medium whitespace-nowrap transition-colors hover:bg-brand-white/5 ${
                     item.href === ROUTES.universe
                       ? "text-accent-neon-green hover:text-accent-neon-green"
                       : "text-brand-light-gray hover:text-brand-white"
