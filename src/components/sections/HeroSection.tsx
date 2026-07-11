@@ -19,7 +19,8 @@ export function HeroSection() {
           <img
             src={`${basePath}/images/logo-centrar.jpeg`}
             alt={siteConfig.name}
-            className="w-[60%] h-auto object-contain invert"
+            className="w-[60%] h-auto object-contain"
+            style={{ mixBlendMode: "multiply" }}
           />
         </div>
 
