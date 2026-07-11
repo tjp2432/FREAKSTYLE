@@ -13,24 +13,31 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {siteConfig.serviceCategories.map((cat) => (
-            <div key={cat.id}>
-              <h3 className="mb-4 text-lg font-semibold text-brand-white">
+            <div
+              key={cat.id}
+              className="rounded-xl border border-brand-light-gray/10 bg-brand-graphite/50 p-5 transition-all duration-300 hover:border-brand-white/20 sm:p-6"
+            >
+              <h3 className="mb-4 text-center text-lg font-bold text-brand-white">
                 {cat.title}
               </h3>
-              <ul className="space-y-3">
+
+              <div className="space-y-3">
                 {cat.items.map((item) => (
-                  <li key={item.id}>
-                    <p className="text-sm font-medium text-brand-light-gray">
+                  <div
+                    key={item.id}
+                    className="rounded-lg border border-brand-light-gray/5 bg-brand-black/40 p-3 transition-colors hover:border-brand-white/10"
+                  >
+                    <p className="text-sm font-semibold text-brand-white">
                       {item.title}
                     </p>
-                    <p className="text-xs leading-relaxed text-brand-light-gray/60">
+                    <p className="mt-1 text-xs leading-relaxed text-brand-light-gray/60">
                       {item.description}
                     </p>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
