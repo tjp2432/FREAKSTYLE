@@ -17,7 +17,7 @@ export function ServicesSection() {
           {siteConfig.serviceCategories.map((cat) => (
             <div
               key={cat.id}
-              className="rounded-xl border border-brand-light-gray/10 bg-brand-graphite/50 p-5 transition-all duration-300 hover:border-brand-white/20 sm:p-6"
+              className="rounded-xl border border-brand-light-gray/10 bg-metallic p-5 transition-all duration-300 hover:border-brand-white/20 sm:p-6"
             >
               <h3 className="mb-4 text-center text-lg font-bold text-brand-white">
                 {cat.title}
