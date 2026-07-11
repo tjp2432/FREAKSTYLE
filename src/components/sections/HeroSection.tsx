@@ -10,7 +10,7 @@ export function HeroSection() {
       <ParticleMist />
 
       <div className="section-container relative z-10 text-center">
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-2">
           <img
             src={`${basePath}/images/freak-style-texto-blanco.png`}
             alt="Freak Style"
