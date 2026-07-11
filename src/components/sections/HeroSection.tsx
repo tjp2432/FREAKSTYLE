@@ -1,14 +1,18 @@
 import { siteConfig } from "@/config/site";
 
+const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
+
 export function HeroSection() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
 
       <div className="section-container relative z-10 text-center">
-        <h1 className="text-display-sm font-bold tracking-tight sm:text-display-md md:text-display-lg lg:text-display-xl">
-          <span className="gradient-text">{siteConfig.name}</span>
-        </h1>
+        <img
+          src={`${basePath}/images/logo-centrar.jpeg`}
+          alt={siteConfig.name}
+          className="mx-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] h-auto object-contain"
+        />
 
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-light-gray sm:text-lg">
           {siteConfig.tagline}
