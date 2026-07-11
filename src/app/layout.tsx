@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ParticleMist } from "@/components/sections/ParticleMist";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,7 +37,8 @@ export default function RootLayout({
     <html lang="es" className={inter.variable}>
       <body className="min-h-screen bg-brand-black font-sans text-brand-white antialiased">
         <Header />
-        <main className="flex min-h-[calc(100vh-4rem)] flex-col">{children}</main>
+        <ParticleMist />
+        <main className="relative z-10 flex min-h-[calc(100vh-4rem)] flex-col">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
