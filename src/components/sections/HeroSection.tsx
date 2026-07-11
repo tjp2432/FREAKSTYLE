@@ -11,6 +11,13 @@ export function HeroSection() {
       <GreenFog />
       <ParticleMist />
 
+      <div className="hidden sm:absolute sm:bottom-1/4 sm:left-1 sm:z-10 sm:flex sm:flex-col sm:items-center sm:gap-2">
+        <span className="text-xs tracking-wider text-brand-light-gray/50 uppercase">Desliza para más información</span>
+        <svg className="h-5 w-5 animate-bounce text-brand-light-gray/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+
       <div className="section-container relative z-10 text-center">
         <div className="flex flex-col items-center gap-2">
           <img
@@ -33,13 +40,7 @@ export function HeroSection() {
           Freak Style Corp es una empresa de diseño, manufactura creativa e innovación especializada en el desarrollo de productos personalizados, textiles, objetos y soluciones visuales.
         </p>
 
-        <div className="relative mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <div className="hidden items-center gap-2 sm:absolute sm:left-1 sm:flex sm:flex-col">
-            <span className="text-xs tracking-wider text-brand-light-gray/50 uppercase">Desliza para más información</span>
-            <svg className="h-5 w-5 animate-bounce text-brand-light-gray/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href="#servicios"
             className="inline-flex h-10 items-center justify-center rounded-md bg-brand-white px-6 text-sm font-semibold text-brand-black transition-transform hover:scale-105"
