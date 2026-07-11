@@ -5,7 +5,7 @@ const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
       <ParticleMist />
 
