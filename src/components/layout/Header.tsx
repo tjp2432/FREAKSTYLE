@@ -35,7 +35,7 @@ export function Header() {
           <img
             src={`${basePath}/images/fs-01-blanco.png`}
             alt={siteConfig.name}
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain"
           />
         </Link>
 
