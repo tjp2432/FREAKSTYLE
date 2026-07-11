@@ -19,11 +19,11 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-6">
           {items.map((item) => (
             <div
               key={item.title}
-              className="rounded-xl border border-brand-light-gray/10 bg-metallic p-6 text-center transition-all duration-300 hover:border-brand-white/20"
+              className="w-72 rounded-xl border border-brand-light-gray/10 bg-metallic p-6 text-center transition-all duration-300 hover:border-brand-white/20"
             >
               <h3 className="text-lg font-bold text-brand-white">{item.title}</h3>
             </div>
