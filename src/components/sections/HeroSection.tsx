@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import { ParticleMist } from "./ParticleMist";
 
 const basePath = process.env.NODE_ENV === "production" ? "/FREAKSTYLE" : "";
 
@@ -6,6 +7,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
+      <ParticleMist />
 
       <div className="section-container relative z-10 text-center">
         <div className="mx-auto w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full flex items-center justify-center overflow-hidden"
