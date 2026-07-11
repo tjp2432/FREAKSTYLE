@@ -10,7 +10,7 @@ export function HeroSection() {
       <ParticleMist />
 
       <div className="section-container relative z-10 text-center">
-        <div className="mx-auto w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center overflow-hidden"
+        <div className="mx-auto w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center"
           style={{
             maskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
             WebkitMaskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
