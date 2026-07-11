@@ -34,7 +34,7 @@ export function HeroSection() {
         </p>
 
         <div className="relative mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <div className="hidden items-center gap-2 sm:absolute sm:left-8 sm:flex sm:flex-col">
+          <div className="hidden items-center gap-2 sm:absolute sm:left-4 sm:flex sm:flex-col">
             <span className="text-xs tracking-wider text-brand-light-gray/50 uppercase">Desliza para más información</span>
             <svg className="h-5 w-5 animate-bounce text-brand-light-gray/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
