@@ -68,7 +68,7 @@ const categories = [
 
 export default function BusinessPage() {
   return (
-    <section className="section-padding pt-10">
+    <section className="pb-12 sm:pb-16 lg:pb-20 pt-12">
       <div className="section-container">
         <div className="mx-auto max-w-5xl">
           <h1 className="text-display-sm font-bold sm:text-display-md">
