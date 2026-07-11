@@ -32,14 +32,14 @@ export function ParticleMist() {
     resize();
     window.addEventListener("resize", resize);
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 120; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 1.2 + 0.3,
-        speedX: (Math.random() - 0.5) * 0.3,
-        speedY: -Math.random() * 0.2 - 0.1,
-        opacity: Math.random() * 0.3 + 0.05,
+        size: Math.random() * 0.6 + 0.15,
+        speedX: (Math.random() - 0.5) * 0.15,
+        speedY: -Math.random() * 0.1 - 0.05,
+        opacity: Math.random() * 0.25 + 0.03,
       });
     }
 
