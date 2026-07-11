@@ -10,7 +10,7 @@ export function HeroSection() {
       <ParticleMist />
 
       <div className="section-container relative z-10 text-center">
-        <div className="mx-auto w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[540px] md:h-[540px] rounded-full flex items-center justify-center overflow-hidden"
+        <div className="mx-auto w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center overflow-hidden"
           style={{
             maskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
             WebkitMaskImage: "radial-gradient(circle at center, black 50%, transparent 100%)",
@@ -23,24 +23,24 @@ export function HeroSection() {
           />
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-brand-light-gray sm:text-xl md:text-2xl font-medium">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-light-gray sm:text-lg md:text-xl font-medium">
           &ldquo;Materializamos tus ideas para expresar tu identidad.&rdquo;
         </p>
 
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-brand-light-gray/70 sm:text-base">
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-brand-light-gray/70 sm:text-base">
           Freak Style Corp es una empresa de diseño, manufactura creativa e innovación especializada en el desarrollo de productos personalizados, textiles, objetos y soluciones visuales.
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href="#servicios"
-            className="inline-flex h-12 items-center justify-center rounded-md bg-brand-white px-8 text-sm font-semibold text-brand-black transition-transform hover:scale-105"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-brand-white px-6 text-sm font-semibold text-brand-black transition-transform hover:scale-105"
           >
             Ver servicios
           </a>
           <a
             href="#contacto"
-            className="inline-flex h-12 items-center justify-center rounded-md border border-brand-white/20 px-8 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-white/10"
+            className="inline-flex h-10 items-center justify-center rounded-md border border-brand-white/20 px-6 text-sm font-semibold text-brand-white transition-colors hover:bg-brand-white/10"
           >
             Contactar
           </a>
