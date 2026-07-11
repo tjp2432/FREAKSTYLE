@@ -21,12 +21,12 @@ export function HeroSection() {
           />
         </div>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-light-gray sm:text-lg">
-          {siteConfig.tagline}
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-brand-light-gray sm:text-xl md:text-2xl font-medium">
+          &ldquo;Materializamos tus ideas para expresar tu identidad.&rdquo;
         </p>
 
-        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-brand-light-gray/70">
-          {siteConfig.description}
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-brand-light-gray/70 sm:text-base">
+          Freak Style Corp es una empresa de diseño, manufactura creativa e innovación especializada en el desarrollo de productos personalizados, textiles, objetos y soluciones visuales.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
