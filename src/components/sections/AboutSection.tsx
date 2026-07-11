@@ -23,7 +23,7 @@ export function AboutSection() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="w-80 rounded-xl border border-brand-light-gray/10 bg-metallic p-6 text-center transition-all duration-300 hover:border-brand-white/20"
+              className="w-80 rounded-xl border border-brand-light-gray/10 card-rivets p-6 text-center transition-all duration-300 hover:border-brand-white/20"
             >
               <h3 className="text-lg font-bold text-brand-white">{item.title}</h3>
             </div>
