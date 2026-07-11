@@ -12,8 +12,13 @@ export function HeroSection() {
       <div className="section-container relative z-10 text-center">
         <div className="flex flex-col items-center gap-6">
           <img
-            src={`${basePath}/images/fs-01-blanco.png`}
+            src={`${basePath}/images/freak-style-texto-blanco.png`}
             alt="Freak Style"
+            className="w-64 h-auto object-contain sm:w-80 md:w-96"
+          />
+          <img
+            src={`${basePath}/images/fs-01-blanco.png`}
+            alt="FS-01"
             className="w-48 h-auto object-contain sm:w-64 md:w-80"
           />
         </div>
