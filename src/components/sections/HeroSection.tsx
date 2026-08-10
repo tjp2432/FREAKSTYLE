@@ -6,10 +6,39 @@ const basePath = "/FREAKSTYLE";
 
 export function HeroSection() {
   const planets = [
-    { size: 280, top: "12%", left: "6%", opacity: 0.25 },
-    { size: 120, top: "18%", right: "12%", opacity: 0.18, ring: true },
-    { size: 70, bottom: "30%", left: "18%", opacity: 0.2 },
-    { size: 180, bottom: "15%", right: "18%", opacity: 0.15 },
+    {
+      size: 280,
+      top: "12%",
+      left: "6%",
+      opacity: 0.3,
+      background:
+        "radial-gradient(circle at 32% 30%, #ffffff 0%, #7ec8e3 12%, #4a90c0 38%, #2c5f8a 60%, #122a44 100%)",
+    },
+    {
+      size: 130,
+      top: "16%",
+      right: "10%",
+      opacity: 0.22,
+      ring: true,
+      background:
+        "repeating-linear-gradient(8deg, #d99a5b 0 8px, #b06a3a 8px 16px, #8a4a28 16px 22px, #d99a5b 22px 30px), radial-gradient(circle at 35% 30%, #ffe9c4 0%, rgba(0,0,0,0) 40%)",
+    },
+    {
+      size: 70,
+      bottom: "32%",
+      left: "16%",
+      opacity: 0.25,
+      background:
+        "radial-gradient(circle at 30% 30%, #f2c9a0 0%, #c67a4a 45%, #7a4324 100%)",
+    },
+    {
+      size: 180,
+      bottom: "12%",
+      right: "16%",
+      opacity: 0.18,
+      background:
+        "repeating-linear-gradient(-12deg, #b48fe0 0 10px, #7c5cb0 10px 20px, #4e3a78 20px 28px, #b48fe0 28px 38px), radial-gradient(circle at 35% 28%, #ead9ff 0%, rgba(0,0,0,0) 45%)",
+    },
   ];
 
   return (
@@ -30,7 +59,7 @@ export function HeroSection() {
               right: p.right,
               bottom: p.bottom,
               opacity: p.opacity,
-              background: "radial-gradient(circle at 32% 30%, #d0d0d0, #4a4a4a 55%, #141414)",
+              background: p.background,
               boxShadow: "inset -12px -12px 30px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)",
             }}
           >
