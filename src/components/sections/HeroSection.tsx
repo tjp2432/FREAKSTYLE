@@ -1,84 +1,16 @@
 import { siteConfig } from "@/config/site";
 import { ParticleMist } from "./ParticleMist";
 import { GreenFog } from "./GreenFog";
+import { Planets } from "./Planets";
 
 const basePath = "/FREAKSTYLE";
 
 export function HeroSection() {
-  const planets = [
-    {
-      size: 280,
-      top: "12%",
-      left: "6%",
-      opacity: 0.3,
-      background:
-        "radial-gradient(circle at 32% 30%, #ffffff 0%, #7ec8e3 12%, #4a90c0 38%, #2c5f8a 60%, #122a44 100%)",
-    },
-    {
-      size: 130,
-      top: "16%",
-      right: "10%",
-      opacity: 0.22,
-      ring: true,
-      background:
-        "repeating-linear-gradient(8deg, #d99a5b 0 8px, #b06a3a 8px 16px, #8a4a28 16px 22px, #d99a5b 22px 30px), radial-gradient(circle at 35% 30%, #ffe9c4 0%, rgba(0,0,0,0) 40%)",
-    },
-    {
-      size: 70,
-      bottom: "32%",
-      left: "16%",
-      opacity: 0.25,
-      background:
-        "radial-gradient(circle at 30% 30%, #f2c9a0 0%, #c67a4a 45%, #7a4324 100%)",
-    },
-    {
-      size: 180,
-      bottom: "12%",
-      right: "16%",
-      opacity: 0.18,
-      background:
-        "repeating-linear-gradient(-12deg, #b48fe0 0 10px, #7c5cb0 10px 20px, #4e3a78 20px 28px, #b48fe0 28px 38px), radial-gradient(circle at 35% 28%, #ead9ff 0%, rgba(0,0,0,0) 45%)",
-    },
-  ];
-
   return (
     <section className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black to-brand-graphite/50" />
       <GreenFog />
-
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        {planets.map((p, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: `${p.size}px`,
-              height: `${p.size}px`,
-              top: p.top,
-              left: p.left,
-              right: p.right,
-              bottom: p.bottom,
-              opacity: p.opacity,
-              background: p.background,
-              boxShadow: "inset -12px -12px 30px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)",
-            }}
-          >
-            {p.ring && (
-              <div
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[50%]"
-                style={{
-                  width: `${p.size * 1.9}px`,
-                  height: `${p.size * 0.55}px`,
-                  border: "2px solid rgba(255,255,255,0.15)",
-                  transform: "translate(-50%, -50%) rotate(-18deg)",
-                  boxShadow: "0 0 20px rgba(0,0,0,0.5)",
-                }}
-              />
-            )}
-          </div>
-        ))}
-      </div>
-
+      <Planets />
       <ParticleMist />
 
       <div className="hidden sm:absolute sm:top-[85%] sm:left-3 sm:z-10 sm:flex sm:flex-col sm:items-center sm:gap-2">
